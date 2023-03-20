@@ -10,7 +10,7 @@ class Program
         else
             return false;
     }
-
+    // A function that takes two numbers and compares them returning a boolean
     public int CompareNumber(int currentNumber, int pastNumber)
     {
        return (pastNumber > currentNumber) ? pastNumber : currentNumber;
@@ -56,13 +56,9 @@ class Program
         Text(pastNumber, count);
     }
 
-
     public static void Main(string[] args)
     {
         Program p = new Program();
         p.Calculation(100);
     }
-
 }
-
-//ToDo: Remove this comment and push using Pull Request.
