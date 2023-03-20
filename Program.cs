@@ -58,8 +58,4 @@ class Program
 
 }
 
-//take the current number and save it to pastNumber
-//do the calculation
-//save the new number to currentNumber
-//compare the two numbers
-//save the bigger one in pastNumber
+//ToDo: Remove this comment and push using Pull Request.
