@@ -10,9 +10,19 @@ class Program
         else
             return false;
     }
+
+    public int CompareNumber(int currentNumber, int pastNumber)
+    {
+       return (pastNumber > currentNumber) ? pastNumber : currentNumber;
+    }
+
     //The "main" function that calls the IsEven function and depending on the returned bool does divide by 2 or multiple by 3 plus 1.
     public int Calculation(int number)
     {
+        //Variables used to save the numbers which will be used to compare later
+        int pastNumber = number;
+        int currentNumber = number;
+
         //The variable that is returned at the end and counts how many times the given number went through the process.
         int count = 1;
         //An if statement that prevents the given number to be 0 or less
@@ -29,15 +39,27 @@ class Program
             else
                 //if odd then the number is multiplied by 3 plus 1
                 number = number * 3 + 1;
+            //Saving the new calculated number into currentNumber
+            currentNumber = number;
+            //Calling the function that will compare the two numbers and output the biggest number
+            pastNumber = CompareNumber(currentNumber, pastNumber);
         }
-
+        //Output the biggest number
+        Console.WriteLine("Biggest Number: " + pastNumber);
+        //Return the count calculated throught the process
         return count;
     }
 
     public static void Main(string[] args)
     {
         Program p = new Program();
-        Console.WriteLine(p.Calculation(10));
+        Console.WriteLine("Number of steps: " + p.Calculation(7));
     }
 
 }
+
+//take the current number and save it to pastNumber
+//do the calculation
+//save the new number to currentNumber
+//compare the two numbers
+//save the bigger one in pastNumber
