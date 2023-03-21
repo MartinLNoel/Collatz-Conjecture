@@ -10,12 +10,14 @@ class Program
         else
             return false;
     }
+
     // A function that takes two numbers and compares them returning a boolean
     public int CompareNumber(int currentNumber, int pastNumber)
     {
        return (pastNumber > currentNumber) ? pastNumber : currentNumber;
     }
     //Function that outputs the console.writeLine of all the neseccary information
+
     public void Text(int pastNumber, int count)
     {
         Console.WriteLine("Biggest Number: " + pastNumber);
